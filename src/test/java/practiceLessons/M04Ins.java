@@ -51,17 +51,18 @@ public class M04Ins {
 		//driver.findElement(By.xpath("(//*[@aria-label='Beğen'])[1]")).click();
 
 
-		for (int i = 0; i < 5; i++) {
-
+		for (int i = 0; i < 20; i++) {
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 			ileriTusu.click();
 			//Thread.sleep(2000);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 			driver.findElement(By.xpath("(//*[@aria-label='Beğen'])[1]")).click();
 			//Thread.sleep(2000);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-			if (driver.findElement(By.xpath("//div[text()='Takip Et']")).isEnabled()){
-				driver.findElement(By.xpath("//div[text()='Takip Et']")).click();
-			}
+			driver.findElement(By.xpath("//div[text()='Takip Et']")).click();
+
+
+
 
 
 		}
